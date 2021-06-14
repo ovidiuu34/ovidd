@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t ovidiuvlad09/frontend -f Dockerfile.dev .
+  - docker build -t ovidiuvlad09/frontenddd -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true ovidiuvlad09/frontend npm run test
+  - docker run -e CI=true ovidiuvlad09/frontenddd npm run test
 language: generic
