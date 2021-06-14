@@ -3,7 +3,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t bmoldovan/docker-react -f Dockerfile.dev .
+  - docker build -t ovidiuvlad09/frontenddd -f Dockerfile.dev .
 
 script:
-  - docker run bmoldovan/docker-react npm run test -- --coverage
+  - docker run -e CI=true ovidiuvlad09/frontenddd npm run test
+language: generic
