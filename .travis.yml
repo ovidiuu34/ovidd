@@ -6,4 +6,5 @@ before_install:
   - docker build -t ovidiuu34/ovidd -f Dockerfile.dev .
 
 script:
-  - docker run ovidiuu34/ovidd npm run test -- --coverage
+  - docker run -e CI=true ovidiuu34/ovidd npm run test
+language: generic
